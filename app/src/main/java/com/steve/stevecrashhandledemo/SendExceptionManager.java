@@ -89,7 +89,7 @@ public class SendExceptionManager {
     public void sendToServer(final CrashException crashException) {
         String device = crashException.getMobileBrand()+"--"+crashException.getMobileModel()+"--"+crashException.getOSVersion();
         Ion.with(CrashApp.getInstance())
-                .load("url")//填写后台的的地址
+                .load("url")//填写后台的的地址.
                 .setTimeout(3000)
                 .setBodyParameter("note", crashException.getCrashExceptionInfor())
                 .setBodyParameter("device",device)
