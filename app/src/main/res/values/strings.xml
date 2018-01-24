@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">SteveCrashHandleDemo</string>
+    <string name="action_restart">重启</string>
+    <string name="error_title">程序错误</string>
+    <string name="error_message">对不起！程序异常退出 \n\n请点击 重启 重新启动程序</string>
+</resources>
