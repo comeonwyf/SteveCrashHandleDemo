@@ -12,7 +12,10 @@ import java.util.List;
 
 import com.steve.stevecrashhandledemo.model.CrashException;
 
-
+/**
+ * @author steve
+ * @date 2018/1/24
+ */
 public class MainActivity extends AppCompatActivity {
 
     private NetworkBroadcastReceiver mReceiver;
@@ -57,11 +60,9 @@ public class MainActivity extends AppCompatActivity {
                     doing = true;
                     List<CrashException> crashExceptionList = CrashExceptionHelper.getCrashExceptionList();
                     if(crashExceptionList!=null && crashExceptionList.size()!=0){
-                        int i = 0;
                         for(CrashException crashException : crashExceptionList){
                             crashException.setSendStat(CrashException.TYPE_SENDING);
                             SendExceptionManager.getInstance().sendToServer(crashException);
-                            i++;
                         }
 
                     }
